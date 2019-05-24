@@ -130,6 +130,9 @@ Result = PASS
 
 
 # Install ML tools
+Reference: https://www.tensorflow.org/install/gpu
+
+
 ```
 $ pip install tensorflow==2.0.0-alpha0
 ```
