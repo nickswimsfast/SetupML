@@ -386,6 +386,12 @@ Test that docker works!
 sudo docker run hello-world
 ```
 
+Fix docker permissions to permanently add user to docker
+```
+sudo usermod -a -G docker $USER
+sudo docker pull tensorflow/tensorflow:latest-gpu-jupyter
+```
+
 # Install ML tools
 Reference: https://www.tensorflow.org/install/gpu
 
