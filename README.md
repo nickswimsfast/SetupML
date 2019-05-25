@@ -147,8 +147,71 @@ sudo add-apt-repository \
    stable"
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
-
 ```
+Then I had the following error:<i>
+```
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+You might want to run 'apt-get -f install' to correct these:
+The following packages have unmet dependencies:
+ nvidia-cuda-toolkit : Depends: nvidia-cuda-dev (= 7.5.18-0ubuntu1) but it is not going to be installed
+E: Unmet dependencies. Try 'apt-get -f install' with no packages (or specify a solution).
+elusin@VRBox:~/Projects/cudasamples/NVIDIA_
+```
+</i>
+Resuming to attempt fix
+```
+sudo apt-get -f install
+```
+
+<i>
+```
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Correcting dependencies... Done
+The following packages were automatically installed and are no longer required:
+  libxfont2 linux-headers-4.15.0-29 linux-headers-4.15.0-29-generic
+  linux-headers-4.15.0-36 linux-headers-4.15.0-36-generic
+  linux-headers-4.15.0-38 linux-headers-4.15.0-38-generic
+  linux-headers-4.15.0-39 linux-headers-4.15.0-39-generic
+  linux-headers-4.15.0-42 linux-headers-4.15.0-42-generic
+  linux-headers-4.15.0-43 linux-headers-4.15.0-43-generic
+  linux-image-4.15.0-29-generic linux-image-4.15.0-36-generic
+  linux-image-4.15.0-38-generic linux-image-4.15.0-39-generic
+  linux-image-4.15.0-42-generic linux-image-4.15.0-43-generic
+  linux-modules-4.15.0-29-generic linux-modules-4.15.0-36-generic
+  linux-modules-4.15.0-38-generic linux-modules-4.15.0-39-generic
+  linux-modules-4.15.0-42-generic linux-modules-4.15.0-43-generic
+  linux-modules-extra-4.15.0-29-generic linux-modules-extra-4.15.0-36-generic
+  linux-modules-extra-4.15.0-38-generic linux-modules-extra-4.15.0-39-generic
+  linux-modules-extra-4.15.0-42-generic linux-modules-extra-4.15.0-43-generic
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  nvidia-cuda-dev
+Recommended packages:
+  libnvcuvid1
+The following NEW packages will be installed:
+  nvidia-cuda-dev
+0 upgraded, 1 newly installed, 0 to remove and 88 not upgraded.
+24 not fully installed or removed.
+Need to get 0 B/201 MB of archives.
+After this operation, 467 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+(Reading database ... 420371 files and directories currently installed.)
+Preparing to unpack .../nvidia-cuda-dev_7.5.18-0ubuntu1_amd64.deb ...
+Unpacking nvidia-cuda-dev (7.5.18-0ubuntu1) ...
+dpkg: error processing archive /var/cache/apt/archives/nvidia-cuda-dev_7.5.18-0ubuntu1_amd64.deb (--unpack):
+ trying to overwrite '/usr/lib/x86_64-linux-gnu/stubs/libcublas.so', which is also in package libcublas-dev 10.2.0.168-1
+dpkg-deb: error: subprocess paste was killed by signal (Broken pipe)
+Errors were encountered while processing:
+ /var/cache/apt/archives/nvidia-cuda-dev_7.5.18-0ubuntu1_amd64.deb
+E: Sub-process /usr/bin/dpkg returned an error code (1)
+```
+</i>
+
 
 # Install ML tools
 Reference: https://www.tensorflow.org/install/gpu
