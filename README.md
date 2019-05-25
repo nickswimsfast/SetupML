@@ -221,6 +221,170 @@ sudo apt-get -f install
 sudo apt autoremove
 ```
 
+<i>
+```
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages will be REMOVED:
+  libxfont2 linux-headers-4.15.0-29 linux-headers-4.15.0-29-generic
+  linux-headers-4.15.0-36 linux-headers-4.15.0-36-generic
+  linux-headers-4.15.0-38 linux-headers-4.15.0-38-generic
+  linux-headers-4.15.0-39 linux-headers-4.15.0-39-generic
+  linux-headers-4.15.0-42 linux-headers-4.15.0-42-generic
+  linux-headers-4.15.0-43 linux-headers-4.15.0-43-generic
+  linux-image-4.15.0-29-generic linux-image-4.15.0-36-generic
+  linux-image-4.15.0-38-generic linux-image-4.15.0-39-generic
+  linux-image-4.15.0-42-generic linux-image-4.15.0-43-generic
+  linux-modules-4.15.0-29-generic linux-modules-4.15.0-36-generic
+  linux-modules-4.15.0-38-generic linux-modules-4.15.0-39-generic
+  linux-modules-4.15.0-42-generic linux-modules-4.15.0-43-generic
+  linux-modules-extra-4.15.0-29-generic linux-modules-extra-4.15.0-36-generic
+  linux-modules-extra-4.15.0-38-generic linux-modules-extra-4.15.0-39-generic
+  linux-modules-extra-4.15.0-42-generic linux-modules-extra-4.15.0-43-generic
+0 upgraded, 0 newly installed, 31 to remove and 88 not upgraded.
+After this operation, 2,017 MB disk space will be freed.
+Do you want to continue? [Y/n] y
+(Reading database ... 421996 files and directories currently installed.)
+Removing libxfont2:amd64 (1:2.0.1-3~ubuntu16.04.3) ...
+Removing linux-headers-4.15.0-29-generic (4.15.0-29.31~16.04.1) ...
+Removing linux-headers-4.15.0-29 (4.15.0-29.31~16.04.1) ...
+Removing linux-headers-4.15.0-36-generic (4.15.0-36.39~16.04.1) ...
+Removing linux-headers-4.15.0-36 (4.15.0-36.39~16.04.1) ...
+Removing linux-headers-4.15.0-38-generic (4.15.0-38.41~16.04.1) ...
+Removing linux-headers-4.15.0-38 (4.15.0-38.41~16.04.1) ...
+Removing linux-headers-4.15.0-39-generic (4.15.0-39.42~16.04.1) ...
+Removing linux-headers-4.15.0-39 (4.15.0-39.42~16.04.1) ...
+Removing linux-headers-4.15.0-42-generic (4.15.0-42.45~16.04.1) ...
+Removing linux-headers-4.15.0-42 (4.15.0-42.45~16.04.1) ...
+Removing linux-headers-4.15.0-43-generic (4.15.0-43.46~16.04.1) ...
+Removing linux-headers-4.15.0-43 (4.15.0-43.46~16.04.1) ...
+Removing linux-modules-extra-4.15.0-29-generic (4.15.0-29.31~16.04.1) ...
+Removing linux-image-4.15.0-29-generic (4.15.0-29.31~16.04.1) ...
+/etc/kernel/postrm.d/initramfs-tools:
+update-initramfs: Deleting /boot/initrd.img-4.15.0-29-generic
+/etc/kernel/postrm.d/zz-update-grub:
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-4.15.0-50-generic
+Found initrd image: /boot/initrd.img-4.15.0-50-generic
+Found linux image: /boot/vmlinuz-4.15.0-45-generic
+Found initrd image: /boot/initrd.img-4.15.0-45-generic
+Found linux image: /boot/vmlinuz-4.15.0-43-generic
+Found initrd image: /boot/initrd.img-4.15.0-43-generic
+Found linux image: /boot/vmlinuz-4.15.0-42-generic
+Found initrd image: /boot/initrd.img-4.15.0-42-generic
+Found linux image: /boot/vmlinuz-4.15.0-39-generic
+Found initrd image: /boot/initrd.img-4.15.0-39-generic
+Found linux image: /boot/vmlinuz-4.15.0-38-generic
+Found initrd image: /boot/initrd.img-4.15.0-38-generic
+Found linux image: /boot/vmlinuz-4.15.0-36-generic
+Found initrd image: /boot/initrd.img-4.15.0-36-generic
+Found Windows Boot Manager on /dev/nvme0n1p2@/EFI/Microsoft/Boot/bootmgfw.efi
+Adding boot menu entry for EFI firmware configuration
+done
+Removing linux-modules-extra-4.15.0-36-generic (4.15.0-36.39~16.04.1) ...
+Removing linux-image-4.15.0-36-generic (4.15.0-36.39~16.04.1) ...
+/etc/kernel/postrm.d/initramfs-tools:
+update-initramfs: Deleting /boot/initrd.img-4.15.0-36-generic
+/etc/kernel/postrm.d/zz-update-grub:
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-4.15.0-50-generic
+Found initrd image: /boot/initrd.img-4.15.0-50-generic
+Found linux image: /boot/vmlinuz-4.15.0-45-generic
+Found initrd image: /boot/initrd.img-4.15.0-45-generic
+Found linux image: /boot/vmlinuz-4.15.0-43-generic
+Found initrd image: /boot/initrd.img-4.15.0-43-generic
+Found linux image: /boot/vmlinuz-4.15.0-42-generic
+Found initrd image: /boot/initrd.img-4.15.0-42-generic
+Found linux image: /boot/vmlinuz-4.15.0-39-generic
+Found initrd image: /boot/initrd.img-4.15.0-39-generic
+Found linux image: /boot/vmlinuz-4.15.0-38-generic
+Found initrd image: /boot/initrd.img-4.15.0-38-generic
+Found Windows Boot Manager on /dev/nvme0n1p2@/EFI/Microsoft/Boot/bootmgfw.efi
+Adding boot menu entry for EFI firmware configuration
+done
+Removing linux-modules-extra-4.15.0-38-generic (4.15.0-38.41~16.04.1) ...
+Removing linux-image-4.15.0-38-generic (4.15.0-38.41~16.04.1) ...
+/etc/kernel/postrm.d/initramfs-tools:
+update-initramfs: Deleting /boot/initrd.img-4.15.0-38-generic
+/etc/kernel/postrm.d/zz-update-grub:
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-4.15.0-50-generic
+Found initrd image: /boot/initrd.img-4.15.0-50-generic
+Found linux image: /boot/vmlinuz-4.15.0-45-generic
+Found initrd image: /boot/initrd.img-4.15.0-45-generic
+Found linux image: /boot/vmlinuz-4.15.0-43-generic
+Found initrd image: /boot/initrd.img-4.15.0-43-generic
+Found linux image: /boot/vmlinuz-4.15.0-42-generic
+Found initrd image: /boot/initrd.img-4.15.0-42-generic
+Found linux image: /boot/vmlinuz-4.15.0-39-generic
+Found initrd image: /boot/initrd.img-4.15.0-39-generic
+Found Windows Boot Manager on /dev/nvme0n1p2@/EFI/Microsoft/Boot/bootmgfw.efi
+Adding boot menu entry for EFI firmware configuration
+done
+Removing linux-modules-extra-4.15.0-39-generic (4.15.0-39.42~16.04.1) ...
+Removing linux-image-4.15.0-39-generic (4.15.0-39.42~16.04.1) ...
+/etc/kernel/postrm.d/initramfs-tools:
+update-initramfs: Deleting /boot/initrd.img-4.15.0-39-generic
+/etc/kernel/postrm.d/zz-update-grub:
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-4.15.0-50-generic
+Found initrd image: /boot/initrd.img-4.15.0-50-generic
+Found linux image: /boot/vmlinuz-4.15.0-45-generic
+Found initrd image: /boot/initrd.img-4.15.0-45-generic
+Found linux image: /boot/vmlinuz-4.15.0-43-generic
+Found initrd image: /boot/initrd.img-4.15.0-43-generic
+Found linux image: /boot/vmlinuz-4.15.0-42-generic
+Found initrd image: /boot/initrd.img-4.15.0-42-generic
+Found Windows Boot Manager on /dev/nvme0n1p2@/EFI/Microsoft/Boot/bootmgfw.efi
+Adding boot menu entry for EFI firmware configuration
+done
+Removing linux-modules-extra-4.15.0-42-generic (4.15.0-42.45~16.04.1) ...
+Removing linux-image-4.15.0-42-generic (4.15.0-42.45~16.04.1) ...
+/etc/kernel/postrm.d/initramfs-tools:
+update-initramfs: Deleting /boot/initrd.img-4.15.0-42-generic
+/etc/kernel/postrm.d/zz-update-grub:
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-4.15.0-50-generic
+Found initrd image: /boot/initrd.img-4.15.0-50-generic
+Found linux image: /boot/vmlinuz-4.15.0-45-generic
+Found initrd image: /boot/initrd.img-4.15.0-45-generic
+Found linux image: /boot/vmlinuz-4.15.0-43-generic
+Found initrd image: /boot/initrd.img-4.15.0-43-generic
+Found Windows Boot Manager on /dev/nvme0n1p2@/EFI/Microsoft/Boot/bootmgfw.efi
+Adding boot menu entry for EFI firmware configuration
+done
+Removing linux-modules-extra-4.15.0-43-generic (4.15.0-43.46~16.04.1) ...
+Removing linux-image-4.15.0-43-generic (4.15.0-43.46~16.04.1) ...
+/etc/kernel/postrm.d/initramfs-tools:
+update-initramfs: Deleting /boot/initrd.img-4.15.0-43-generic
+/etc/kernel/postrm.d/zz-update-grub:
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-4.15.0-50-generic
+Found initrd image: /boot/initrd.img-4.15.0-50-generic
+Found linux image: /boot/vmlinuz-4.15.0-45-generic
+Found initrd image: /boot/initrd.img-4.15.0-45-generic
+Found Windows Boot Manager on /dev/nvme0n1p2@/EFI/Microsoft/Boot/bootmgfw.efi
+Adding boot menu entry for EFI firmware configuration
+done
+Removing linux-modules-4.15.0-29-generic (4.15.0-29.31~16.04.1) ...
+Removing linux-modules-4.15.0-36-generic (4.15.0-36.39~16.04.1) ...
+Removing linux-modules-4.15.0-38-generic (4.15.0-38.41~16.04.1) ...
+Removing linux-modules-4.15.0-39-generic (4.15.0-39.42~16.04.1) ...
+Removing linux-modules-4.15.0-42-generic (4.15.0-42.45~16.04.1) ...
+Removing linux-modules-4.15.0-43-generic (4.15.0-43.46~16.04.1) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+```
+</i> 
+
+```
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+```
+
+Test that docker works!
+```
+sudo docker run hello-world
+```
 
 # Install ML tools
 Reference: https://www.tensorflow.org/install/gpu
