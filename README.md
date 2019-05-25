@@ -212,6 +212,15 @@ E: Sub-process /usr/bin/dpkg returned an error code (1)
 ```
 </i>
 
+Reference bug fix:
+https://devtalk.nvidia.com/default/topic/1048225/linux/issues-after-installing-cuda-10-/
+```
+sudo dpkg -i --force-overwrite /var/cache/apt/archives/nvidia-cuda-dev_7.
+5.18-0ubuntu1_amd64.deb
+sudo apt-get -f install
+sudo apt autoremove
+```
+
 
 # Install ML tools
 Reference: https://www.tensorflow.org/install/gpu
