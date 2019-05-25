@@ -392,6 +392,8 @@ sudo usermod -a -G docker $USER
 sudo docker pull tensorflow/tensorflow:latest-gpu-jupyter
 sudo docker run -it --rm tensorflow/tensorflow:latest-gpu-jupyter
 ```
+(REBOOT)
+
 
 # Install ML tools
 Reference: https://www.tensorflow.org/install/gpu
