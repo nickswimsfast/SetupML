@@ -235,13 +235,15 @@ sudo docker run -it --rm tensorflow/tensorflow:latest-gpu-jupyter
 ```
 (REBOOT)
 
+# To run tensorflow docker image
+Having an error when i try to import and can't do nvidia-smi...
+```
+sudo docker run -it -p 8888:8888 --rm tensorflow/tensorflow:latest-gpu-jupyter
+```
 
 # Install ML tools
 Reference: https://www.tensorflow.org/install/gpu
 
 
-```
-$ pip install tensorflow==2.0.0-alpha0
-```
 
 
