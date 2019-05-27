@@ -239,7 +239,40 @@ sudo docker run -it --rm tensorflow/tensorflow:latest-gpu-jupyter
 Having an error when i try to import and can't do nvidia-smi...
 ```
 sudo docker run -it -p 8888:8888 --rm tensorflow/tensorflow:latest-gpu-jupyter
+or
+docker run -it --rm -v $(realpath ~/notebooks):/tf/notebooks -p 8888:8888 tensorflow/tensorflow:latest-gpu-jupyter
+
 ```
+This didn't work i couldn't get cuda working in the docker image or tensorflow to import, but jupyter notebook did work.
+
+# Trying to use nvidia docker
+Reference: https://github.com/NVIDIA/nvidia-docker
+```
+docker volume ls -q -f driver=nvidia-docker | xargs -r -I{} -n1 docker ps -q -a -f volume={} | xargs -r docker rm -f
+sudo apt-get purge -y nvidia-docker
+
+# Add the package repositories
+curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | \
+  sudo apt-key add -
+distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | \
+  sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+sudo apt-get update
+sudo apt-get install -y nvidia-docker2
+sudo pkill -SIGHUP dockerd
+docker run --runtime=nvidia --rm nvidia/cuda:9.0-base nvidia-smi
+```
+This worked, it got cuda working in the docker containers. Then I had to figure out the right command in order to run it with the gpu image.
+
+# Code to run gpu docker image 
+It required opening the ports to access the jupyter notebook
+```
+# docker run --runtime=nvidia -it --rm tensorflow/tensorflow:latest-gpu-jupyter
+docker run --runtime=nvidia -it -p 8888:8888 --rm tensorflow/tensorflow:latest-gpu-jupyter
+```
+This did it!
+
+
 
 # Install ML tools
 Reference: https://www.tensorflow.org/install/gpu
