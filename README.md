@@ -273,6 +273,11 @@ docker run --runtime=nvidia -it -p 8888:8888 --rm tensorflow/tensorflow:latest-g
 ```
 This did it!
 
+# Code to save files on the host
+This is required to save your work! The Docker image is ephemeral meaning anything you add to it will be lost, unless you save it to the host drive. Here's how:
+```
+$ docker run --runtime=nvidia -it -p 8888:8888 --volume $PWD:/tf/Projects --rm tensorflow/tensorflow:latest-gpu-jupyter
+```
 
 
 # Install ML tools
