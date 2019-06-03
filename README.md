@@ -1,5 +1,6 @@
 # SetupML
-Tipsheet with commands to setup ubuntu 16.04 with tools and commands for ML.
+Tipsheet with commands to setup ubuntu 16.04 with tools and commands for ML. Specifically;
+* Tensorflow GPU with Jupyter notebook compatibility (with docker image)
 
 # Computer
 Graphics = GTX 1070
